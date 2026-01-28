@@ -78,3 +78,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+
+// HERO WORD SLIDE / FADE ANIMATION
+document.addEventListener("DOMContentLoaded", () => {
+  const words = ["Shawarma", "Kebabs", "Flavor"];
+  const typing = document.getElementById("typing");
+  let index = 0;
+
+  function showWord() {
+    typing.classList.remove("show"); // fade out
+    setTimeout(() => {
+      typing.textContent = words[index]; // change word
+      typing.classList.add("show"); // fade in
+      index = (index + 1) % words.length;
+    }, 300); // short delay for fade out
+  }
+
+  // Initial word animation
+  typing.classList.add("show");
+
+  // Loop every 2.5 seconds
+  setInterval(showWord, 1000 + 1500);
+});
