@@ -322,7 +322,7 @@ footer {
 
 #order p {
   max-width: 700px;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 2rem auto;
   font-size: 1rem;
   color: #fff;
 }
@@ -331,12 +331,15 @@ footer {
 #order .order-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: center; /* center buttons horizontally */
+  align-items: center;     /* align buttons vertically if multiple rows */
+  gap: 1rem;               /* spacing between buttons */
+  margin-top: 1rem;
 }
 
 /* Scoped order buttons */
 #order .order-btn {
+  flex: 0 0 auto;          /* don't shrink, don't grow */
   padding: 1rem 2.2rem;
   font-size: 1rem;
   border-radius: 50px;
@@ -348,6 +351,10 @@ footer {
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
   transition: all 0.3s ease;
+  display: inline-flex;     /* align text properly inside button */
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;         /* optional, consistent button size */
 }
 
 #order .order-btn:hover {
@@ -356,4 +363,17 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  #order .order-buttons {
+    flex-direction: column; /* stack buttons vertically on small screens */
+  }
+
+  #order .order-btn {
+    width: 80%; /* make them take most of the width on mobile */
+    min-width: unset;
+  }
+}
+
 
