@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // HERO WORD SLIDE / FADE ANIMATION
 document.addEventListener("DOMContentLoaded", () => {
-  const words = ["Shawarma", "Kebabs", "Flavor", "Sauces", "Fries", "Beef"];
+  const words = ["SHAWARMA", "KEBABS", "FLAVOR", "SAUCES", "FRIES", "BEEF"];
   const typing = document.getElementById("typing");
   let index = 0;
 
