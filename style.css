@@ -512,5 +512,16 @@ footer {
 }
 
 
+/* CONTACT LINK STYLE */
+.contact-link {
+  color: var(--gold);
+  text-decoration: underline;
+  font-weight: 800;
+  
+
+
+}
+
+
 
 
